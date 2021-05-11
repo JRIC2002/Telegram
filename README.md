@@ -59,10 +59,11 @@ Los siguientes comandos solo los puede usar el usuario.
   Flags: `-u` o `--user`, `-t`  
   * `-u` o `--user`: Consigue información de un usuario.  
     Ejemplo: `.getinfo -u <username>` o `.getinfo --user <username>`
-  * `-c`: Consigue información de un grupo o canal.  
-    Ejemplo: `.getinfo -t <group or channel>`
+  * `-t`: Consigue información de un grupo o canal.  
+    Ejemplo: `.getinfo -t <group or channel>` o `.getinfo -t .`  
+    Nota: El `.` indica el actual grupo o canal. 
 * **YouTube**  
-  `.youtube` o `.yt`: Buscar un video en YouTube y lanza el primer resultado.  
+  `.youtube` o `.yt`: Buscar un video en YouTube y mostrar el primer resultado.  
   Ejemplo: `.youtube the weeknd blinding lights` o `.yt the weeknd blinding lights`  
 * **Wikipedia**  
   `.wikipedia` o `.wiki`: Buscar información en Wikipedia.  
@@ -71,7 +72,7 @@ Los siguientes comandos solo los puede usar el usuario.
   `.google`: Buscar en Google.  
   Ejemplo: `.google windows 10`  
 * **Traductor**  
-  `.translate`: Traducir texot a otro idioma.  
+  `.translate`: Traducir texto a otro idioma.  
   Flags : `<lang_code>`  
   * `<lang_code>`: Código del idioma a traducir.  
     Ejemplo: `.translate es Hello world`  
@@ -87,8 +88,8 @@ Los siguientes comandos solo los puede usar el usuario.
   * `-s` o `--show`: Mostrar mis sistemas operativos favoritos.  
     Ejemplo: `.myfavoriteos -s` o `.myfavoriteos --show`  
   * `-a` o `-add`: Agregar un sistema operativo a Mis Favoritos.  
-    Ejemplo: `.myfavoriteos -a <os>` o `.myfavorite --add <os>`  
-  * `-d` o `--delete`: Eliminar un sistema operativo de Mis Favoritos.
+    Ejemplo: `.myfavoriteos -a <os>` o `.myfavoriteos --add <os>`  
+  * `-d` o `--delete`: Eliminar un sistema operativo de Mis Favoritos.  
     Ejemplo: `.myfavoriteos -d <os>` o `.myfavoriteos --delete <os>`  
 * **Bloquear**  
   `.block`: Bloquear a un usuario.  
@@ -97,11 +98,11 @@ Los siguientes comandos solo los puede usar el usuario.
   `.unblock`: Desbloquear a un usuario.  
   Ejemplo: `.unblock <username>`  
 * **Seguridad**  
-  `.security`: Acivar o desactivar medidas de seguridad.  
+  `.security`: Activar o desactivar medidas de seguridad.  
   Flags: `-a` o `--activate`, `-d` o `--desactivate`  
   * `-a` o `--activate`: Activar medidas de seguridad.  
     Ejemplo: `.security -a` o `.security --activate`  
-  * `-d` o `--delete`: Desactivar medidas de seguridad.  
+  * `-d` o `--desactivate`: Desactivar medidas de seguridad.  
     Ejemplo: `.security -d` o `.security --desactivate`  
 * **Prefijo de los comandos**  
   `.setprefix`: Configura un nuevo prefijo para los comandos.  
