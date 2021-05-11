@@ -5,9 +5,10 @@ name = "pypi"
 
 [packages]
 telethon = "==1.21.1"
-requests = "*"
+requests = "==2.25.1"
+beautifulsoup4 = "==4.9.3"
 
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.9.1"
