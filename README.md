@@ -1,7 +1,8 @@
 # Telegram
-![Telegram v1.0.0](https://img.shields.io/badge/Telegram-v1.0.0-brightgreen)
+![Telegram v1.1.0](https://img.shields.io/badge/Telegram-v1.1.0-brightgreen)
 ![Release stable](https://img.shields.io/badge/Release-stable-brightgreen)
 ![License GNU General Public License v3.0](https://img.shields.io/badge/License-GNU%20General%20Public%20License%20v3.0-blue)
+![Telegram](https://github.com/jric2002/Telegram/blob/master/.images/Telegram.png)
 
 ## Información
 Con esta sencilla herramienta en python podrás iniciar sesión con tu cuenta de Telegram desde la Terminal y con funciones extra.
@@ -51,22 +52,69 @@ Los siguientes comandos solo los puede usar el usuario.
 * **Menú de ayuda**  
   `.help`: Muestra el menú de ayuda.  
   * `.help <comando>`: Ver más detalles acerca del comando.  
-* **Conseguir información**  
+* **Información del servidor**  
+  `.serverinfo`: Mostrar información del servidor.
+* **Información del usuario**  
   `.getinfo`: Consigue información de un usuario, grupo o canal.  
   Flags: `-u` o `--user`, `-t`  
   * `-u` o `--user`: Consigue información de un usuario.  
     Ejemplo: `.getinfo -u <username>` o `.getinfo --user <username>`
   * `-c`: Consigue información de un grupo o canal.  
     Ejemplo: `.getinfo -t <group or channel>`
-* **Buscar videos en YouTube**  
-  `.yt` o `.youtube`: Busca un video en YouTube y lanza el primer resultado.  
-  Ejemplo: `.yt the weeknd blinding lights` o `.youtube the weeknd blinding lights`  
-* **Configurar el prefijo**  
+* **YouTube**  
+  `.youtube` o `.yt`: Buscar un video en YouTube y lanza el primer resultado.  
+  Ejemplo: `.youtube the weeknd blinding lights` o `.yt the weeknd blinding lights`  
+* **Wikipedia**  
+  `.wikipedia` o `.wiki`: Buscar información en Wikipedia.  
+  Ejemplo: `.wikipedia gnu linux` o `.wiki gnu linux`  
+* **Google**  
+  `.google`: Buscar en Google.  
+  Ejemplo: `.google windows 10`  
+* **Traductor**  
+  `.translate`: Traducir texot a otro idioma.  
+  Flags : `<lang_code>`  
+  * `<lang_code>`: Código del idioma a traducir.  
+    Ejemplo: `.translate es Hello world`  
+* **Clima**  
+  `.weather`: Conseguir datos del clima de una ciudad.  
+  Ejemplo: `.weather Lima`  
+* **Alternativas**  
+  `.alternative`: Buscar alternativas a ciertos programas en https://alternativeto.net/  
+  Ejemplo: `.alternative google chrome`  
+* **Favoritos**  
+  `.myfavoriteos` o `mfos`: Ver, agregar y eliminar mis sistemas operativos favoritos.   
+  Flags: `-s` o `--show`, `-a` o `--add`, `-d` o `--delete`  
+  * `-s` o `--show`: Mostrar mis sistemas operativos favoritos.  
+    Ejemplo: `.myfavoriteos -s` o `.myfavoriteos --show`  
+  * `-a` o `-add`: Agregar un sistema operativo a Mis Favoritos.  
+    Ejemplo: `.myfavoriteos -a <os>` o `.myfavorite --add <os>`  
+  * `-d` o `--delete`: Eliminar un sistema operativo de Mis Favoritos.
+    Ejemplo: `.myfavoriteos -d <os>` o `.myfavoriteos --delete <os>`  
+* **Bloquear**  
+  `.block`: Bloquear a un usuario.  
+  Ejemplo: `.block <username>`  
+* **Desbloquear**  
+  `.unblock`: Desbloquear a un usuario.  
+  Ejemplo: `.unblock <username>`  
+* **Seguridad**  
+  `.security`: Acivar o desactivar medidas de seguridad.  
+  Flags: `-a` o `--activate`, `-d` o `--desactivate`  
+  * `-a` o `--activate`: Activar medidas de seguridad.  
+    Ejemplo: `.security -a` o `.security --activate`  
+  * `-d` o `--delete`: Desactivar medidas de seguridad.  
+    Ejemplo: `.security -d` o `.security --desactivate`  
+* **Prefijo de los comandos**  
   `.setprefix`: Configura un nuevo prefijo para los comandos.  
-  Ejemplo: `.setprefix <prefijo>`
+  Ejemplo: `.setprefix <prefijo>`  
+
+### Funciones en desarrollo
+* **Idioma**  
+  `.setlanguage`: Establecer un nuevo idioma.  
+  Ejemplo: `.setlanguage <lang_code>`  
+**Nota:** Esta función esta en desarrollo; solo afecta a algunas funciones.
 
 ## Soporte
-Si tienes alguna sugerencia o si ocurre algún problema, puedes dejar tu comentario en la sección de [**Issues**](https://github.com/JRIC2002/Telegram/issues).
+Si tienes alguna sugerencia o si ocurre algún problema, puedes dejar tu comentario en la sección de [**Issues**](https://github.com/jric2002/Telegram/issues).
 
 ## Licencia
-Telegram está hecho con 💚 por JRIC2002. Vea el archivo de **Licencia** para más detalles.
+Telegram está hecho con 💚 por **José Rodolfo**. Vea el archivo de **Licencia** para más detalles.
