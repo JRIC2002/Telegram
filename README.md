@@ -77,7 +77,7 @@ Los siguientes comandos solo los puede usar el usuario.
   * `<lang_code>`: Código del idioma a traducir.  
     Ejemplo: `.translate es Hello world`  
 * **Clima**  
-  `.weather`: Conseguir datos del clima de una ciudad.  
+  `.weather`: Conseguir datos del clima de una ciudad en http://wttr.in/  
   Ejemplo: `.weather Lima`  
 * **Alternativas**  
   `.alternative`: Buscar alternativas a ciertos programas en https://alternativeto.net/  
