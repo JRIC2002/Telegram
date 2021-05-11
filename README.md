@@ -42,7 +42,7 @@ Con esta sencilla herramienta en python podrás iniciar sesión con tu cuenta de
 ```
 **Nota:** Es importante que tengas un username para poder utilizar los comandos.
 
-# Prueba
+### Prueba
 Bueno, ahora nos vamos a nuestro Telegram, y si mandamos `.help` en cualquier chat, nos aparecerá el menú de ayuda.
 ![Probando los comandos](https://github.com/jric2002/Telegram/blob/master/.images/prueba-telegram.png)
 
