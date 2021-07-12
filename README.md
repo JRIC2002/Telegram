@@ -1,5 +1,5 @@
 # Telegram
-![Telegram v1.1.0](https://img.shields.io/badge/Telegram-v1.1.0-brightgreen)
+![Telegram v1.2.0](https://img.shields.io/badge/Telegram-v1.2.0-brightgreen)
 ![Release stable](https://img.shields.io/badge/Release-stable-brightgreen)
 ![License GNU General Public License v3.0](https://img.shields.io/badge/License-GNU%20General%20Public%20License%20v3.0-blue)
 ![Telegram](https://github.com/jric2002/Telegram/blob/master/.images/Telegram.png)
@@ -8,8 +8,9 @@
 Con esta sencilla herramienta en python podrás iniciar sesión con tu cuenta de Telegram desde la Terminal y con funciones extra.
 
 ## Características
-* Iniciar sesión con tu username, api id y api hash.
-* Funciones extra.
+* Iniciar sesión desde terminal
+* Funciones extra
+* 16 módulos integrados
 
 ## Instalación
 1. Para el despliegue de la herramienta vamos a necesitar Python, si no lo tienes instalado puedes descargarlo desde el sitio web oficial https://www.python.org/downloads/
@@ -91,6 +92,9 @@ Los siguientes comandos solo los puede usar el usuario.
     Ejemplo: `.myfavoriteos -a <os>` o `.myfavoriteos --add <os>`  
   * `-d` o `--delete`: Eliminar un sistema operativo de Mis Favoritos.  
     Ejemplo: `.myfavoriteos -d <os>` o `.myfavoriteos --delete <os>`  
+* **Hacker**  
+  `.hackear`: Es una broma, intentalo.  
+  Ejemplo: `.hackear`  
 * **Bloquear**  
   `.block`: Bloquear a un usuario.  
   Ejemplo: `.block <username>`  
