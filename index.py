@@ -8,7 +8,7 @@
 #from bs4 import BeautifulSoup
 import json
 from modules.colors import color
-from modules.commands import help, serverinfo, getinfo, youtube, wikipedia, google, translate, weather, alternative, myfavoriteos, block, unblock, security, setprefix, setlanguage
+from modules.commands import help, serverinfo, getinfo, youtube, wikipedia, google, translate, weather, alternative, myfavoriteos, block, unblock, security, setprefix, setlanguage, pseudohack
 #import os
 #import platform
 #import re
@@ -48,7 +48,7 @@ class App:
     def version(self):
         print("{}{}{} {}{}".format(color.bold, color.white, self.app, self.app_version, color.reset))
 #Instancia de la clase Telegram
-telegram = App("Telegram", "v1.1.0")
+telegram = App("Telegram", "v1.2.0")
 
 class User:
     def __init__(self, username, api_id, api_hash):
@@ -113,37 +113,37 @@ class User:
             async def deleteMsg():
                 time.sleep(1)
                 await client.delete_messages(chat_id, message_id)
-            if command == prefix + "help" and len(arg) == 0 and sender_id == my_id:
+            if command == (prefix + "help") and len(arg) == 0 and sender_id == my_id:
                 await deleteMsg()
                 await help.help(client, chat_id, prefix)
-            if command == prefix + "serverinfo" and len(arg) == 0 and sender_id == my_id:
+            if command == (prefix + "serverinfo") and len(arg) == 0 and sender_id == my_id:
                 await deleteMsg()
                 await serverinfo.serverinfo(client, chat_id, telegram, self.username)
-            if command == prefix + "getinfo" and len(arg) == 2 and sender_id == my_id:
+            if command == (prefix + "getinfo") and len(arg) == 2 and sender_id == my_id:
                 await deleteMsg()
                 if arg[0] == "-u" or str(arg[0]) == "--user":
                     await getinfo.userinfo(client, chat_id, arg[1])
                 if arg[0] == "-t":
                     await getinfo.gcinfo(client, chat_id, arg[1])
-            if (command == prefix + "youtube" or command == prefix + "yt") and len(arg) >= 1 and sender_id == my_id:
+            if (command == (prefix + "youtube") or command == prefix + "yt") and len(arg) >= 1 and sender_id == my_id:
                 await deleteMsg()
                 await youtube.youtube(client, chat_id, arg)
-            if (command == prefix + "wikipedia" or command == prefix + "wiki") and len(arg) >= 1 and sender_id == my_id:
+            if (command == (prefix + "wikipedia") or command == prefix + "wiki") and len(arg) >= 1 and sender_id == my_id:
                 await deleteMsg()
                 await wikipedia.wikipedia(client, chat_id, language, arg)
-            if command == prefix + "google" and len(arg) >= 1 and sender_id == my_id:
+            if command == (prefix + "google") and len(arg) >= 1 and sender_id == my_id:
                 await deleteMsg()
                 await google.google(client, chat_id, arg)
-            if command == prefix + "translate" and len(arg) >= 2 and sender_id == my_id:
+            if command == (prefix + "translate") and len(arg) >= 2 and sender_id == my_id:
                 await deleteMsg()
                 await translate.translate(client, chat_id, arg[0], arg[1:])
-            if command == prefix + "weather" and len(arg) >= 1 and sender_id == my_id:
+            if command == (prefix + "weather") and len(arg) >= 1 and sender_id == my_id:
                 await deleteMsg()
                 await weather.weather(client, chat_id, language, arg)
-            if command == prefix + "alternative" and len(arg) >= 1 and sender_id == my_id:
+            if command == (prefix + "alternative") and len(arg) >= 1 and sender_id == my_id:
                 await deleteMsg()
                 await alternative.alternative(client, chat_id, arg)
-            if (command == prefix + "myfavoriteos" or command == prefix  + "mfos") and len(arg) >= 1 and sender_id == my_id:
+            if (command == (prefix + "myfavoriteos") or command == (prefix  + "mfos")) and len(arg) >= 1 and sender_id == my_id:
                 await deleteMsg()
                 if (arg[0] == "-s" or arg[0] == "--show") and len(arg) == 1:
                     await myfavoriteos.show(client, chat_id)
@@ -151,13 +151,16 @@ class User:
                     await myfavoriteos.add(client, chat_id, arg[1:])
                 if (arg[0] == "-d" or arg[0] == "--delete") and len(arg) >= 2:
                     await myfavoriteos.delete(client, chat_id, arg[1:])
-            if command == prefix + "block" and len(arg) == 1 and sender_id == my_id:
+            if command == (prefix + "hackear") and len(arg) == 0:
+                #await deleteMsg()
+                await pseudohack.pseudohack(client, chat_id, message_id)
+            if command == (prefix + "block") and len(arg) == 1 and sender_id == my_id:
                 await deleteMsg()
                 await block.block(client, chat_id, arg[0])
-            if command == prefix + "unblock" and len(arg) == 1 and sender_id == my_id:
+            if command == (prefix + "unblock") and len(arg) == 1 and sender_id == my_id:
                 await deleteMsg()
                 await unblock.unblock(client, chat_id, arg[0])
-            if command == prefix + "security" and len(arg) == 1 and sender_id == my_id:
+            if command == (prefix + "security") and len(arg) == 1 and sender_id == my_id:
                 await deleteMsg()
                 try:
                     if arg[0] == "-a" or arg[0] == "--activate":
@@ -166,10 +169,10 @@ class User:
                         await security.desactivate(client, chat_id, security_status)
                 except Exception as error:
                     await client.send_message(chat_id, "Ha ocurrido un problema.")
-            if command == prefix + "setprefix" and len(arg) == 1 and sender_id == my_id:
+            if command == (prefix + "setprefix") and len(arg) == 1 and sender_id == my_id:
                 await deleteMsg()
                 await setprefix.setprefix(client, chat_id, arg[0])
-            if command == prefix + "setlanguage" and len(arg) == 1 and sender_id == my_id:
+            if command == (prefix + "setlanguage") and len(arg) == 1 and sender_id == my_id:
                 await deleteMsg()
                 await setlanguage.setlanguage(client, chat_id, arg[0])
             if sender_id == chat_id and event.is_private and sender_id != my_id and security_status:
